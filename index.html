@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Meet</title>
+    <link
+      href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img src="images/header-logo.png" alt="" />
+      </a>
+      <p class="timer"></p>
+      <ul class="selection-list">
+        <li class="selection-item">
+          <a href="#" id="helps"><i class="far fa-question-circle"></i></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item"><a href="#">Trợ giúp</a></li>
+            <li class="dropdown-item"><a href="#">Điều khoản và dịch vụ</a></li>
+            <li class="dropdown-item">
+              <a href="#">Chính sách và quyền riêng tư</a>
+            </li>
+            <li class="dropdown-item">
+              <a href="#">Bản tóm tắt điều khoản</a>
+            </li>
+          </ul>
+        </li>
+        <li class="selection-item">
+          <a href="#" id="exclamation"
+            ><i class="far fa-comment-alt-exclamation"></i
+          ></a>
+        </li>
+        <li class="selection-item">
+          <a href="#"><i class="far fa-cog" id="setting"></i></a>
+        </li>
+        <li class="selection-item">
+          <a href="#"><i class="far fa-bars"></i></a>
+        </li>
+        <li class="selection-item">
+          <a href="#">
+            <img
+              src="images/151348915_1331494193901484_3486946488719962294_n.jpg"
+              alt="avt"
+            />
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <section>
+      <div class="section-left">
+        <h1>
+          Cuộc họp video chất lượng. Giờ đây miễn phí cho tất cả mọi người
+        </h1>
+        <h3>
+          Chúng tôi đã thiết kế lại Google Meet — dịch vụ tổ chức cuộc họp kinh
+          doanh với độ bảo mật cao — để cung cấp miễn phí cho mọi người.
+        </h3>
+        <div class="control-wrapper">
+          <button class="primary-btn">
+            <i class="far fa-video-plus"></i><span>Cuộc họp mới</span>
+          </button>
+          <div class="input-wrapper">
+            <i class="fas fa-keyboard"></i>
+            <input
+              type="text"
+              placeholder="Nhập một mã hoặc đường dẫn"
+              id="input-id"
+            />
+            <button class="primary-text" id="join-btn">Tham gia</button>
+          </div>
+        </div>
+
+        <p class="research-more"><a href="#">Tìm hiểu thêm</a> về Goole Meet</p>
+      </div>
+      <div class="section-right">
+        <div class="slide-container">
+          <button id="leftBtn" disabled>
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button id="rightBtn"><i class="fas fa-chevron-right"></i></button>
+          <ul class="slide-list">
+            <li class="slide-item active">
+              <img
+                src="images/user_edu_get_a_link_light_90698cd7b4ca04d3005c962a3756c42d.svg"
+                alt=""
+              />
+              <h3>Nhận đường liên kết bạn có thể chia sẻ</h3>
+              <p>
+                Nhấp vào <strong>cuộc họp mới</strong> để nhận đường liên kết mà
+                bạn có thể gửi cho những người mình muốn họp cùng
+              </p>
+            </li>
+            <li class="slide-item">
+              <img
+                src="images/user_edu_brady_bunch_light_81fa864771e5c1dd6c75abe020c61345.svg"
+                alt=""
+              />
+              <h3>Xem mọi người cùng lúc</h3>
+              <p>
+                Để thấy nhiều người hơn cùng một lúc, hãy chuyển tới phần Thay
+                đổi bố cục trong trình đơn Tùy chọn khác
+              </p>
+            </li>
+            <li class="slide-item">
+              <img
+                src="images/user_edu_scheduling_light_b352efa017e4f8f1ffda43e847820322.svg"
+                alt=""
+              />
+              <h3>Nhận đường liên kết bạn có thể chia sẻ</h3>
+              <p>
+                Nhấp vào <strong>cuộc họp mới</strong> để nhận đường liên kết mà
+                bạn có thể gửi cho những người mình muốn họp cùng
+              </p>
+            </li>
+            <li class="slide-item">
+              <img
+                src="images/user_edu_safety_light_e04a2bbb449524ef7e49ea36d5f25b65.svg"
+                alt=""
+              />
+              <h3>Nhận đường liên kết bạn có thể chia sẻ</h3>
+              <p>
+                Nhấp vào <strong>cuộc họp mới</strong> để nhận đường liên kết mà
+                bạn có thể gửi cho những người mình muốn họp cùng
+              </p>
+            </li>
+          </ul>
+          <div class="sign">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal">
+      <div class="overlay"></div>
+      <form class="feedback">
+        <h1>Gửi phản hồi</h1>
+        <textarea
+          style="resize: none"
+          name="feed-back"
+          id="feed-back"
+          placeholder="Bạn có ý kiến? Chúng tôi luôn hoan nghênh, nhưng vui lòng không chia sẻ thông tin nhạy cảm. Bạn có câu hỏi? Hãy thử xem thông tin trợ giúp hoặc liên hệ với nhóm hỗ trợ."
+        ></textarea>
+        <input type="checkbox" name="attack-img" id="attack-img" />
+        <label for="attack-img">Gửi kèm ảnh chụp màn hình</label>
+        <div class="screen-capture"></div>
+        <div class="terms">
+          Nếu bạn muốn yêu cầu thay đổi nội dung vì lý do pháp lý, hãy truy cập
+          <a href="#">trang Trợ giúp pháp lý</a>. Một số
+          <a href="#">thông tin tài khoản và hệ thống</a> có thể được gửi đến
+          Google. Chúng tôi sẽ sử dụng thông tin bạn cung cấp để giúp giải quyết
+          các vấn đề kỹ thuật và để cải thiện các dịch vụ theo
+          <a href="#">Chính sách quyền riêng tư</a> và
+          <a href="#">Điều khoản dịch vụ</a> của chúng tôi.
+        </div>
+        <div class="control">
+          <button onclick="closeModal()">HỦY</button>
+          <button class="primary-text" onclick="closeModal()">GỬI</button>
+        </div>
+      </form>
+      <div class="wrapper-setting">
+        <div class="setting">
+          <div class="setting-left">
+            <h1>Cài đặt</h1>
+            <ul class="setting-list">
+              <li class="setting-item">
+                <i class="fal fa-speaker"></i> <span>Âm thanh</span>
+              </li>
+              <li class="setting-item">
+                <i class="far fa-video"></i> <span>Video</span>
+              </li>
+              <li class="setting-item active">
+                <i class="fal fa-cog"></i> <span>Cài đặt chung</span>
+              </li>
+            </ul>
+          </div>
+          <div class="setting-right">
+            <button class="close btn" onclick="closeSetting()">
+              <i class="fal fa-times"></i>
+            </button>
+            <form action="">
+              <input
+                type="checkbox"
+                name="annouce-diagnostic"
+                id="annouce-diagnostic"
+              />
+              <label for="annouce-diagnostic"
+                >Báo cáo thông tin chuẩn đoán bổ sung để giúp cải tiến sản phẩm
+                này</label
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
