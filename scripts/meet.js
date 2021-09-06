@@ -54,6 +54,7 @@ function showMoreOpts() {
 const btns = document.querySelectorAll(".info-item button");
 const slideBoxEl = document.querySelector(".slide-box");
 const slideBoxItem = document.querySelectorAll(".slide-box-item");
+const videoShareEl = document.querySelector(".video-sharing");
 
 function removeAnotherBtn() {
   btns.forEach((btn) => {
@@ -75,6 +76,8 @@ btns.forEach((element, idx) => {
       return closeSlideBox();
     }
 
+    videoShareEl.classList.add("resize");
+
     slideBoxEl.classList.add("active");
     removeAnotherBtn();
     btns[idx].classList.add("active");
@@ -86,6 +89,8 @@ btns.forEach((element, idx) => {
 function closeSlideBox() {
   slideBoxEl.classList.remove("active");
   removeAnotherBtn();
+  removeAnotherSlide();
+  videoShareEl.classList.remove("resize");
 }
 
 // hanle switcher

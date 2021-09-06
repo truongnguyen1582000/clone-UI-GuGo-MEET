@@ -924,6 +924,16 @@ section .section-right .slide-container .sign div.active {
           transform: translate(-50%, -55%);
   width: 80%;
   height: 85%;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.wrapper .video-sharing.resize {
+  width: 70%;
+  -webkit-transform: translate(-68%, -55%);
+          transform: translate(-68%, -55%);
 }
 
 .wrapper .video-sharing .avt {

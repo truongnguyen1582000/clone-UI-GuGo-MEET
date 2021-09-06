@@ -241,6 +241,12 @@
     transform: translate(-50%, -55%);
     width: 80%;
     height: 85%;
+    transition: transform 0.3s linear;
+
+    &.resize {
+      width: 70%;
+      transform: translate(-68%, -55%);
+    }
 
     .avt {
       z-index: 2;
