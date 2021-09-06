@@ -9,6 +9,7 @@
       href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css"
       rel="stylesheet"
     />
+    <link rel="icon" href="images/logo_meet_2020q4_color_2x_web_96dp.png" />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/main.css" />
@@ -65,9 +66,31 @@
           doanh với độ bảo mật cao — để cung cấp miễn phí cho mọi người.
         </h3>
         <div class="control-wrapper">
-          <button class="primary-btn">
-            <i class="far fa-video-plus"></i><span>Cuộc họp mới</span>
-          </button>
+          <div class="create-meet">
+            <button class="primary-btn" id="create-meet">
+              <i class="far fa-video-plus"></i><span>Cuộc họp mới</span>
+            </button>
+            <ul class="option-list">
+              <li class="option-item">
+                <a href="#" id="later-meet-btn">
+                  <i class="fal fa-link"></i>
+                  <span>Tạo một cuộc họp để sử dụng sau</span>
+                </a>
+              </li>
+              <li class="option-item">
+                <a href="./meet.html">
+                  <i class="far fa-plus"></i>
+                  <span>Bắt đầu một cuộc họp tức thì</span>
+                </a>
+              </li>
+              <li class="option-item">
+                <a href="#">
+                  <i class="far fa-calendar"></i>
+                  <span>Lịch biểu trong Lịch Google</span>
+                </a>
+              </li>
+            </ul>
+          </div>
           <div class="input-wrapper">
             <i class="fas fa-keyboard"></i>
             <input
@@ -115,10 +138,10 @@
                 src="images/user_edu_scheduling_light_b352efa017e4f8f1ffda43e847820322.svg"
                 alt=""
               />
-              <h3>Nhận đường liên kết bạn có thể chia sẻ</h3>
+              <h3>Lên kế hoạch trước</h3>
               <p>
-                Nhấp vào <strong>cuộc họp mới</strong> để nhận đường liên kết mà
-                bạn có thể gửi cho những người mình muốn họp cùng
+                Nhấp vào <strong>cuộc họp mới</strong> để lên lịch cuộc họp
+                trong Lịch Google và gửi lời mời cho người tham gia
               </p>
             </li>
             <li class="slide-item">
@@ -126,10 +149,10 @@
                 src="images/user_edu_safety_light_e04a2bbb449524ef7e49ea36d5f25b65.svg"
                 alt=""
               />
-              <h3>Nhận đường liên kết bạn có thể chia sẻ</h3>
+              <h3>Cuộc họp của bạn được bảo vệ an toàn</h3>
               <p>
-                Nhấp vào <strong>cuộc họp mới</strong> để nhận đường liên kết mà
-                bạn có thể gửi cho những người mình muốn họp cùng
+                Không ai có thể tham gia cuộc họp trừ khi người tổ chức mời hoặc
+                cho phép
               </p>
             </li>
           </ul>
@@ -204,7 +227,25 @@
           </div>
         </div>
       </div>
+      <div class="later-meet">
+        <div class="later-meet-top">
+          <h3>Đây là đường liên kết đến cuộc họp của bạn</h3>
+          <button class="close-btn" onclick="closeLaterMeet()">
+            <i class="far fa-times"></i>
+          </button>
+        </div>
+        <p>
+          Hãy sao chép đường liên kết này rồi gửi tới những người mà bạn muốn
+          họp cùng. Bạn nhớ lưu lại đường liên kết để có thể sử dụng sau.
+        </p>
+        <div class="generated-link">
+          <span>meet.google.com/rdv-hecy-sqv</span
+          ><button>
+            <i class="far fa-copy"></i>
+          </button>
+        </div>
+      </div>
     </div>
-    <script src="app.js"></script>
+    <script src="scripts/app.js"></script>
   </body>
 </html>

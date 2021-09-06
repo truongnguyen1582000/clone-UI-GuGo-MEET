@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo_meet_2020q4_color_2x_web_96dp.png" />
+    <title>Meet</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="invite-box">
+        <div class="invite-box-top">
+          <h2>Cuộc họp đã sẵn sàng</h2>
+          <button class="circle-btn" onclick="closeInviteBox()">
+            <i class="fal fa-times"></i>
+          </button>
+        </div>
+        <div class="invite-box-bottom">
+          <button class="primary-btn">
+            <i class="far fa-user-plus"></i><span>Thêm người khác</span>
+          </button>
+          <p class="guide-info">
+            Hoặc chia sẻ đường liên kết của cuộc họp này với những người mà bạn
+            muốn họ tham gia vào cuộc họp
+          </p>
+          <div class="generated-link">
+            <span>meet.google.com/rdv-hecy-sqv</span
+            ><button>
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+          <div class="security-info">
+            <i class="fas fa-shield-virus"></i>
+            <p>
+              Những người sử dụng đường liên kết đến cuộc họp này phải được bạn
+              cho phép thì mới có thể tham gia.
+            </p>
+          </div>
+          <p class="auth-info">Tham gia bằng truongnguyen1582000@gmail.com</p>
+        </div>
+      </div>
+      <div class="left-bottom">
+        <span class="current-user">Bạn</span>
+        <div class="timer-and-id">
+          <span class="timer"></span>
+          | <span>gmn-aphb-rtk</span>
+        </div>
+      </div>
+
+      <ul class="control-list">
+        <li class="control-item">
+          <button><i class="fas fa-microphone"></i></button>
+        </li>
+        <li class="control-item">
+          <button><i class="fal fa-video"></i></button>
+        </li>
+        <li class="control-item">
+          <button onclick="showOpts()">
+            <i class="far fa-arrow-square-up"></i>
+          </button>
+          <ul class="present-opts">
+            <h2>Trình bày</h2>
+            <li class="option">
+              <button>
+                <i class="fal fa-tv-alt"></i
+                ><span>Toàn bộ màn hình của bạn</span>
+              </button>
+            </li>
+            <li class="option">
+              <button>
+                <i class="far fa-window-restore"></i><span>Một cửa sổ</span>
+              </button>
+            </li>
+            <li class="option">
+              <button>
+                <i class="fas fa-window-maximize"></i>
+                <div class="option-info">
+                  <span>Một thẻ</span>
+                  <p>Thích hợp nhất cho video và ảnh động</p>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="control-item">
+          <button onclick="showMoreOpts()">
+            <i class="fas fa-ellipsis-v"></i>
+          </button>
+          <ul class="present-opts" id="more-opts">
+            <li class="option">
+              <button>
+                <i class="far fa-pen"></i>
+                <div class="option-info">
+                  <span>Bảng trắng</span>
+                  <p>Mở Jam</p>
+                </div>
+              </button>
+            </li>
+            <li class="option">
+              <button>
+                <i class="fad fa-th-large"></i><span>Thay đổi bố cục</span>
+              </button>
+            </li>
+            <li class="option">
+              <button>
+                <i class="fas fa-expand"></i>
+                <span>Toàn màn hình</span>
+              </button>
+            </li>
+            <li class="option">
+              <button>
+                <i class="fas fa-users-cog"></i>
+                <span>Thay đổi nền</span>
+              </button>
+            </li>
+            <li class="option">
+              <button>
+                <i class="fas fa-closed-captioning"></i>
+                <span>Phụ đề</span>
+              </button>
+            </li>
+            <hr />
+            <li class="option">
+              <button>
+                <i class="fas fa-comment-alt-exclamation"></i>
+                <span>Báo cáo sự cố</span>
+              </button>
+            </li>
+            <li class="option">
+              <button>
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Báo cáo vi phạm</span>
+              </button>
+            </li>
+            <li class="option">
+              <button>
+                <i class="fab fa-searchengin"></i>
+                <span>Khắc phục sự cố và trợ giúp</span>
+              </button>
+            </li>
+            <li class="option">
+              <button>
+                <i class="fas fa-cogs"></i>
+                <span>Cài đặt</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="control-item">
+          <button><i class="fas fa-phone-alt"></i></button>
+        </li>
+      </ul>
+
+      <ul class="info-list">
+        <li class="info-item">
+          <button class="circle-btn"><i class="far fa-info-circle"></i></button>
+        </li>
+        <li class="info-item">
+          <button class="circle-btn">
+            <i class="far fa-user-friends"></i>
+          </button>
+        </li>
+        <li class="info-item">
+          <button class="circle-btn">
+            <i class="far fa-comment-alt-lines"></i>
+          </button>
+        </li>
+        <li class="info-item">
+          <button class="circle-btn"><i class="far fa-shapes"></i></button>
+        </li>
+        <li class="info-item">
+          <button class="circle-btn">
+            <i class="far fa-shield-check"></i>
+          </button>
+        </li>
+      </ul>
+
+      <div class="slide-box">
+        <div class="slide-box-item slide-box-info">
+          <div class="slide-box-top">
+            <h2>Chi tiết về cuộc họp</h2>
+            <button class="fal fa-times" onclick="closeSlideBox()"></button>
+          </div>
+          <h3>Thông tin về cách tham gia</h3>
+          <p class="meet-link">https://meet.google.com/ccw-stvs-oaw</p>
+          <button class="primary-text copy-link">
+            <i class="fal fa-copy"></i
+            ><span>Sao chép thông tin về cách tham gia</span>
+          </button>
+          <p class="gg-schedule-info">
+            Số tệp đính kèm trong Lịch Google sẽ hiển thị ở đây
+          </p>
+        </div>
+        <div class="slide-box-item slide-box-member">
+          <div class="slide-box-top">
+            <h2>Mọi người</h2>
+            <button class="fal fa-times" onclick="closeSlideBox()"></button>
+          </div>
+          <div class="controls">
+            <button>
+              <i class="fas fa-microphone-slash"></i>
+              <span>Đã tắt tiếng của tất cả</span>
+            </button>
+            <button>
+              <i class="far fa-user-plus"></i>
+              <span>Thêm người</span>
+            </button>
+            <button>
+              <i class="fal fa-toggle-on"></i>
+              <span>Bộ điều khiển của người tổ chức</span>
+            </button>
+          </div>
+          <div class="input-wrapper">
+            <i class="far fa-search"></i>
+            <input type="text" placeholder="Tìm kiếm người" />
+          </div>
+          <h4>Trong cuộc gọi</h4>
+          <div class="user-info">
+            <img src="images/avt.jpg" alt="" />
+            <div class="name-and-roll">
+              <h3>Doraemon (Bạn)</h3>
+              <p>Người tổ chức cuộc họp</p>
+            </div>
+            <i class="fas fa-microphone-slash"></i>
+            <button class="fal fa-thumbtack"></button>
+          </div>
+        </div>
+        <div class="slide-box-item slide-box-chat">
+          <div class="slide-box-top">
+            <h2>Tin nhắn trong cuộc gọi</h2>
+            <button class="fal fa-times" onclick="closeSlideBox()"></button>
+          </div>
+          <div class="allow-chating">
+            <span>Cho phép mọi người nhắn tin</span>
+            <div class="switcher">
+              <div></div>
+            </div>
+          </div>
+          <div class="allow-chating tac">
+            <span
+              >Tin nhắn sẽ chỉ hiển thị với những người tham gia cuộc gọi và sẽ
+              bị xóa khi cuộc gọi kết thúc.</span
+            >
+          </div>
+
+          <div class="input-wrapper">
+            <input
+              type="text"
+              placeholder="Gửi tin nhắn cho mọi người"
+              id="chat-value"
+            />
+            <button id="send-chat">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+        <div class="slide-box-item slide-box-white-board">
+          <div class="slide-box-top">
+            <h2>Hoạt động</h2>
+            <button class="fal fa-times" onclick="closeSlideBox()"></button>
+          </div>
+          <button class="open-white-board">
+            <i class="fas fa-chalkboard"></i>
+            <div class="white-board-info">
+              <h4>Bảng trắng</h4>
+              <p>Cùng nhau động não và phát thảo ý tưởng</p>
+            </div>
+          </button>
+        </div>
+        <div class="slide-box-item slide-box-secure">
+          <div class="slide-box-top">
+            <h2>An toàn cuộc họp</h2>
+            <button class="fal fa-times" onclick="closeSlideBox()"></button>
+          </div>
+          <h3>Thông tin về cách tham gia</h3>
+          <p class="meet-link">https://meet.google.com/ccw-stvs-oaw</p>
+          <button class="primary-text copy-link">
+            <i class="fal fa-copy"></i
+            ><span>Sao chép thông tin về cách tham gia</span>
+          </button>
+          <p class="gg-schedule-info">
+            Số tệp đính kèm trong Lịch Google sẽ hiển thị ở đây
+          </p>
+        </div>
+      </div>
+
+      <div class="status-muted">
+        <i class="fas fa-microphone-slash"></i>
+      </div>
+
+      <div class="video-sharing">
+        <div class="avt">
+          <img src="images/avt.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="scripts/meet.js"></script>
+  </body>
+</html>

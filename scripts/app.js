@@ -48,11 +48,25 @@ settingEl.addEventListener("click", () => {
 const inputIdEl = document.querySelector("#input-id");
 const joinBtn = document.querySelector("#join-btn");
 
+inputIdEl.addEventListener("focus", () => {
+  joinBtn.style.display = "inline";
+  if (inputIdEl.value === "") {
+    joinBtn.disabled = true;
+  }
+});
+
+inputIdEl.addEventListener("focusout", () => {
+  if (inputIdEl.value === "") {
+    joinBtn.style.display = "none";
+  }
+});
+
 inputIdEl.addEventListener("keyup", () => {
   if (inputIdEl.value !== "") {
     joinBtn.style.display = "inline";
+    joinBtn.disabled = false;
   } else {
-    joinBtn.style.display = "none";
+    joinBtn.disabled = true;
   }
 });
 
@@ -97,3 +111,32 @@ leftBtnEl.addEventListener("click", () => {
   removeAnother(signs, "active");
   signs[idx].classList.add("active");
 });
+
+// handle create meeting
+const createBtn = document.querySelector(".create-meet");
+const optsEl = document.querySelector(".option-list");
+
+createBtn.addEventListener("click", () => {
+  optsEl.classList.add("active");
+});
+
+window.addEventListener("mouseup", (e) => {
+  if (e.target !== optsEl && e.target.parentNode !== optsEl) {
+    optsEl.classList.remove("active");
+  }
+});
+
+//handle modal create later meeting
+const laterMeetBtn = document.querySelector("#later-meet-btn");
+laterMeetBtn.addEventListener("click", () => {
+  setTimeout(() => {
+    optsEl.classList.remove("active");
+  }, 0);
+  modalEl.classList.add("active-later-meet");
+});
+
+function closeLaterMeet() {
+  modalEl.classList.remove("active-later-meet");
+}
+
+
